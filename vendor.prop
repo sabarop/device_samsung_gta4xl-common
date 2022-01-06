@@ -74,6 +74,11 @@ ro.crypto.volume.metadata.method=dm-default-key
 ## Power HAL
 vendor.powerhal.disp.idle_support=false
 
+# Enable wide gamut and color management
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.use_color_management=true
+
 ## Samsung specific
 ro.product_ship=true
 # Set csc support in OMX
