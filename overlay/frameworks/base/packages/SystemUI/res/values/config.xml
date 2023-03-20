@@ -18,4 +18,10 @@
 <resources>
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
     <integer name="config_chargingFastThreshold">10800000</integer>
+
+    <!-- Doze: does this device support STATE_DOZE?
+         The display is dozing in a low power state; it is still on but is
+         optimized for showing system-provided content while the device is
+         non-interactive. -->
+    <bool name="doze_display_state_supported">true</bool>    
 </resources>
