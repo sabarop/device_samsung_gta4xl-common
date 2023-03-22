@@ -6,3 +6,6 @@ ro.apk_verity.mode=2
 
 ## Filesystem
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
+## Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core
