@@ -66,6 +66,9 @@ ro.vendor.ddk.set.afbc=1
 ## Incremental FS
 ro.incremental.enable=true
 
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 ## Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
 # Call deleteAllKeys if vold detects a factory reset
