@@ -118,6 +118,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
+# Incremental FS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=true
+
 # init
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/fstab.exynos9611:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9611 \
