@@ -281,6 +281,10 @@ on post-fs-data
 
     # write /sys/module/scsc_mx/parameters/disable_recovery_handling 0
 
+# Dalvik
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3
+    setprop dalvik.vm.dex2oat-threads 4
+
 # Samsung Pay
 #    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
 
