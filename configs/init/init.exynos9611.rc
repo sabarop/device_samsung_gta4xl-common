@@ -348,21 +348,27 @@ on boot
     #CPUSET
     chown system system /dev/cpuset/top-app/cpus
     chown system system /dev/cpuset/foreground/cpus
+    chown system system /dev/cpuset/foreground_window/cpus
     chown system system /dev/cpuset/background/cpus
     chown system system /dev/cpuset/system-background/cpus
     chown system system /dev/cpuset/restricted/cpus
+    chown system system /dev/cpuset/dexopt/cpus
     chown system system /dev/cpuset/cpus
     chmod 0664 /dev/cpuset/top-app/cpus
     chmod 0664 /dev/cpuset/foreground/cpus
+    chmod 0664 /dev/cpuset/foreground_window/cpus
     chmod 0664 /dev/cpuset/background/cpus
     chmod 0664 /dev/cpuset/system-background/cpus
     chmod 0664 /dev/cpuset/restricted/cpus
+    chmod 0664 /dev/cpuset/dexopt/cpus
     chmod 0664 /dev/cpuset/cpus
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-7
+    write /dev/cpuset/foreground_window/cpus 0-7
+    write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-7
     write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/dexopt/cpus 0-3
 
     setprop vendor.powerhal.init 1
 
