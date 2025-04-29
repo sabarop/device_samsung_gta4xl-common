@@ -109,9 +109,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 ## Graphics
 TARGET_USES_VULKAN := true
 
-# libinit
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):init_universal9611
-
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_NO_GCC := true
