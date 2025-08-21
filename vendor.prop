@@ -35,9 +35,6 @@ debug.hwui.target_cpu_time_percent=30
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.lockprof.threshold=500
 
-## FRP
-ro.frp.pst=/dev/block/persistent
-
 ## Graphics
 debug.hwui.skia_atrace_enabled=false
 debug.sf.auto_latch_unsignaled=0
