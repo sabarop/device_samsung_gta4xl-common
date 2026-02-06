@@ -2,10 +2,20 @@ allow hal_audio_default efs_file:dir search;
 allow hal_audio_default imei_efs_file:dir search;
 allow hal_audio_default imei_efs_file:file r_file_perms;
 
+binder_call(hal_audio_default, system_suspend_server)
+
 r_dir_file(hal_audio_default, sec_efs_file);
 
 get_prop(hal_audio_default, vendor_radio_prop);
 
 allow hal_audio_default sysfs_audio:file r_file_perms;
 
+allow hal_audio_default efs_file:file r_file_perms;
+
 allow hal_audio_default rild:unix_stream_socket connectto;
+allow hal_audio_default hal_system_suspend_service:service_manager find;
+allow hal_audio_default proc_sound_devicetree:file r_file_perms;
+
+allow hal_audio_default rild:unix_stream_socket connectto;
+
+wakelock_use(hal_audio_default);

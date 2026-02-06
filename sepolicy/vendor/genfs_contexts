@@ -1,6 +1,7 @@
 ## Proc
 genfscon proc /simslot_count                                                                                   u:object_r:proc_simslot_count:s0
 genfscon proc /sys/vm/swappiness                                                                               u:object_r:proc_swappiness:s0
+genfscon proc /wakelocks			       u:object_r:proc_wakelocks:s0
 
 ## Sysfs
 # Class
@@ -12,22 +13,68 @@ genfscon sysfs /devices/platform/panel/panel_drv/backlight/panel/max_brightness 
 genfscon sysfs /devices/platform/11500000.mali/dma_buf_gpu_mem                                                 u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/11500000.mali/total_gpu_mem                                                   u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/11500000.mali/kprcs                                                           u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/10000.mif_pdata/sim/ds_detect                                                 u:object_r:sysfs_sim_writable:s0
+genfscon sysfs /devices/platform/148e0000.dsim/backlight/panel/brightness                                      u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/148e0000.dsim/backlight/panel/max_brightness                                  u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/148e0000.dsim/lcd/panel                                                       u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/platform/13200000.usb/13200000.dwc3/udc/13200000.dwc3/current_speed                    u:object_r:sysfs_usb:s0
 genfscon sysfs /devices/platform/13900000.spi/spi_master/spi6/spi6.0/input/input0/enabled                      u:object_r:sysfs_touchscreen_writable:s0
 genfscon sysfs /devices/platform/13900000.spi/spi_master/spi6/spi6.0/input/input1/enabled                      u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/13870000.i2c/i2c-4/4-0048/input/input4/enabled                                u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-muic/power_supply/muic-manager/type         u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-0/0-003b/power_supply/s2mu106-fuelgauge/type                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-0/0-003c/power_supply/s2mu106-usbpd/type                     u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-charger/power_supply/s2mu106-charger/type   u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-charger/power_supply/otg/type               u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0063/power_supply/sm5440-charger/type                    u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-fuelgauge/power_supply/sm5713-fuelgauge/type u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/sm5713-charger/type     u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/otg/type                u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/139b0000.pinctrl/gpiochip43/gpio/gpio138/value                                u:object_r:sysfs_gps_writable:s0
+genfscon sysfs /devices/platform/sec-direct-charger/power_supply/sec-direct-charger/type                       u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                     u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                        u:object_r:sysfs_decon_writable:s0
+genfscon sysfs /devices/platform/148c0000.decon_t/vsync                                                        u:object_r:sysfs_decon_writable:s0
 genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video6/name                                         u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/12c30000.mfc0/video4linux/video7/name                                         u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/11a10000.speedy/i2c-12/12-0000/s2mpu09-rtc/rtc/rtc0/hctosys                   u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/14400000.fimc_is_sensor/video4linux                                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14410000.fimc_is_sensor/video4linux 	                                       u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14410700.fimc_is_sensor/video4linux                                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14420000.fimc_is_sensor/video4linux                                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14490000.fimc_is/video4linux                                                  u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/14630000.gdc/video4linux                                                      u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/12c30000.mfc0/video4linux                                                     u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/11a10000.speedy/i2c-15/15-0000/s2mpu09-rtc/rtc/rtc0/hctosys                   u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/system/chip-id/revision                                                                u:object_r:sysfs_chipid:s0
+genfscon sysfs /devices/platform/11500000.mali/power_policy						       u:object_r:sysfs_gpu:s0
 
 # Firmware
 genfscon sysfs /firmware/devicetree/base/sound/mixer-paths                                                     u:object_r:sysfs_audio:s0
 
 # Module
 genfscon sysfs /module/scsc_bt/parameters/bluetooth_address                                                    u:object_r:sysfs_bt_writable:s0
+
+# Kernel
+genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                                                u:object_r:sysfs_mem_boost_writable:s0
+genfscon sysfs /kernel/mm/vmscan/am_app_launch								       u:object_r:sysfs_mem_boost_writable:s0
+
+# mDnie
+genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mdnie/					       u:object_r:sysfs_mdnie_writable:s0
+genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mask_brightness				       u:object_r:sysfs_touchscreen_writable:s0
+
+# Tsp
+genfscon sysfs /devices/platform/panel/panel_drv/backlight/panel					       u:object_r:sysfs_backlight_writable:s0
+genfscon sysfs /devices/platform/13870000.i2c/i2c-4/4-0048/input/input5/enabled				       u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/13870000.i2c/i2c-4/4-0048/input/input6/enabled				       u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/virtual/sec/tsp/fod_pressed							       u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/dc_vibrator/leds/vibrator/						       u:object_r:sysfs_leds_writable:s0
+
+genfscon sysfs /module/cpuidle/parameters/		u:object_r:sysfs_cpuidle_writable:s0
+genfscon sysfs /devices/virtual/input/			u:object_r:sysfs_input_writable:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/sec/hall_ic								       u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/ssp_sensor/hall_ic
+   u:object_r:sysfs_sensors_writable:s0
