@@ -314,7 +314,7 @@ on post-fs-data
 
 on boot
 # SSWAP
-    write /proc/sys/vm/swappiness 145
+    write /proc/sys/vm/swappiness 60
 
     write /proc/sys/vm/watermark_scale_factor 200
 
