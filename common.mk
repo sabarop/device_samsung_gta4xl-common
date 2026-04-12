@@ -132,10 +132,6 @@ PRODUCT_COPY_FILES += \
 # libinit
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_universal9611)
 
-# Launcher
-PRODUCT_PACKAGES += \
-    NexusLauncherOverlay
-
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
