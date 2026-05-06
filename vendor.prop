@@ -38,6 +38,7 @@ dalvik.vm.lockprof.threshold=500
 ## Graphics
 debug.hwui.skia_atrace_enabled=false
 debug.sf.auto_latch_unsignaled=0
+debug.sf.disable_client_composition_cache=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.latch_unsignaled=0
 debug.sf.predict_hwc_composition_strategy=0
