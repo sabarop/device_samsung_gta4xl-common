@@ -77,7 +77,7 @@ on init
     chown system system /dev/cpu_dma_latency
     chown system system /dev/cpuctl/top-app/cpu.uclamp.min
     chown system system /dev/cpuctl/foreground/cpu.uclamp.min
-    chown system system /dev/cpuset/top-app/uclamp.latency_sensitive
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
     chmod 0664 /dev/cluster0_freq_min
     chmod 0664 /dev/cluster0_freq_max
     chmod 0664 /dev/cluster1_freq_min
@@ -85,7 +85,7 @@ on init
     chmod 0664 /dev/cpu_dma_latency
     chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
     chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.min
-    chmod 0664 /dev/cpuset/top-app/uclamp.latency_sensitive
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
 
     #sensor
     chmod 0664 /dev/nanohub
@@ -377,10 +377,18 @@ on boot
 
 #Performance
     #CPUFREQ
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
     chown system system /sys/power/cpufreq_min_limit
     chown system system /sys/power/cpufreq_max_limit
     chown system system /sys/power/cpufreq_table
 
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
     chmod 0664 /sys/power/cpufreq_min_limit
     chmod 0664 /sys/power/cpufreq_max_limit
 
