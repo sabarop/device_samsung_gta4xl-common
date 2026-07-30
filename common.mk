@@ -87,6 +87,8 @@ PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
     gralloc.universal9611
 
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
