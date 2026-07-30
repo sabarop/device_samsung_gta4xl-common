@@ -77,10 +77,6 @@ PRODUCT_PACKAGES += \
 # Apeture
 TARGET_BUILD_APERTURE_CAMERA := true
 
-# ConfigStore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
