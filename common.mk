@@ -128,6 +128,9 @@ PRODUCT_COPY_FILES += \
 # libinit
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_universal9611)
 
+# libion
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
