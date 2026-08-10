@@ -319,4 +319,7 @@
          (lower-end devices may want to disable) -->
     <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
 
+    <!-- Disable app launch blur -->
+    <bool name="config_enableAppLaunchBlur">false</bool>
+
 </resources>
