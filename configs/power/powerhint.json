@@ -54,6 +54,7 @@
             "Name": "GPUMinFreq",
             "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
+                "949000",
                 "764000",
                 "455000",
                 "260000"
@@ -215,7 +216,13 @@
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "764000"
+            "Value": "949000"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "TALatency",
+            "Duration": 0,
+            "Value": "1"
         }
     ]
 }
