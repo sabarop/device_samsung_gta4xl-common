@@ -95,8 +95,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl:64 \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper-service.teegris
 
 # Graphics
 # Device uses high-density artwork where available

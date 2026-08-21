@@ -64,10 +64,6 @@ vendor/firmware/setfile_4ha.bin
 vendor/firmware/setfile_5e9.bin
 vendor/firmware/spkamp.bin
 
-## Gatekeeper
-vendor/lib/hw/gatekeeper.exynos9611.so
-vendor/lib64/hw/gatekeeper.exynos9611.so
-
 ## GPS
 vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
 vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
