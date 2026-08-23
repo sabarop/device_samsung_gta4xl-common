@@ -123,11 +123,12 @@ vendor/lib64/sensors.grip.so
 ## VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
 vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
 
-## Widevine - From P610XXU2EVC5
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|60d0ed267f1468110a79c64a56af3c978f269f18
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib/libwvhidl.so|3246cb592658f2d8f23901ac8ddcc03b6176f06f|3246cb592658f2d8f23901ac8ddcc03b6176f06f
+## Widevine - from A145FXXS2AWF3
+vendor/bin/hw/android.hardware.drm-service.widevine|0d963024f30414a40838f84863d8ae52a28c460b
+vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8515b3d37f0e1ccc4d
+vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
+vendor/lib64/libwvaidl.so|85beebd186250057ecfcb8df164a75cf9e47b802
+vendor/lib64/liboemcrypto.so|96b0919d1123c3cbf40528d75f6fba1493951dda
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc
