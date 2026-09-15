@@ -20,6 +20,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/samsung/gta4xl-common',
+    'hardware/samsung',
     'hardware/samsung_slsi-linaro/graphics',
 ]
 
