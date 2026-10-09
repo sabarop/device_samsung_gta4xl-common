@@ -184,12 +184,6 @@
         },
         {
             "PowerHint": "INTERACTIVE",
-            "Node": "TABoost",
-            "Duration": 0,
-            "Value": "40"
-        },
-        {
-            "PowerHint": "INTERACTIVE",
             "Node": "TALatency",
             "Duration": 0,
             "Value": "1"
