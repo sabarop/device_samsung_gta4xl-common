@@ -63,9 +63,6 @@ PRODUCT_PACKAGES += \
     libbt-vendor:64 \
     bt_did.slsi.conf
 
-PRODUCT_COPY_FILES += \
-    hardware/samsung_slsi/libbt/conf/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
