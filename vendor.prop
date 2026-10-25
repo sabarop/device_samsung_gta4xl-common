@@ -1,6 +1,9 @@
 ## Adoptable Storage
 ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
+## APK Verity
+ro.apk_verity.mode=2
+
 ## Audio
 audio.offload.min.duration.secs=30
 aaudio.mmap_policy=2
@@ -47,6 +50,9 @@ ro.vendor.ddk.set.afbc=1
 ro.lmk.use_psi=true
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
+
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 ## Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
